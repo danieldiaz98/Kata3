@@ -3,20 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package kata3;
 
-/**
- *
- * @author danie
- */
 public class Kata3 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        HistogramDisplay histo = new HistogramDisplay ();
-        histo.execute();
+        Histogram<String> histogram = new Histogram();
+        histogram.increment("ulpgc.es");
+        histogram.increment("ull.es");
+        histogram.increment("dis.ulpgc.es");
+        histogram.increment("ulpgc.es");
+        histogram.increment("outlook.com");
+        histogram.increment("ulpgc.es");
+        histogram.increment("ulpgc.es");
+        histogram.increment("ull.es");
+        histogram.increment("dis.ulpgc.es");
+
+        HistogramDisplay histogramDisplay = new HistogramDisplay("HISTOGRAMA", histogram);
+        histogramDisplay.execute();
     }
-    
+
 }
